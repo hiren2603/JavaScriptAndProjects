@@ -10,22 +10,22 @@
 // }
 
 let persons = [
-    {
-        name: "John",
-        email: "john@gmail.com",
-        contact: "9898798987"
-    },
-    {
-        name: "Jen",
-        email: "jen@gmail.com",
-        contact: "9898198981"
-    },
-    {
-        name: "Josh",
-        email: "Josh@gmail.com",
-        contact: "9898098980"
-    }
-]
+  {
+    name: "John",
+    email: "john@gmail.com",
+    contact: "9898798987",
+  },
+  {
+    name: "Jen",
+    email: "jen@gmail.com",
+    contact: "9898198981",
+  },
+  {
+    name: "Josh",
+    email: "Josh@gmail.com",
+    contact: "9898098980",
+  },
+];
 
 // for(let i=0; i < persons.length; i++){
 //     console.log(persons[i].name, persons[i].email)
@@ -66,13 +66,11 @@ let persons = [
 // }
 // console.log(str)
 
-
 // 3. create Pyramid shape
 //     *
 //    * *
 //   * * *
-//  * * * *  
-
+//  * * * *
 
 // let line = 5;
 // let char = "";
@@ -93,13 +91,26 @@ let persons = [
 
 // 4. Reverse Pyramid
 
-let word= "";
+let word = "";
 let n = 5;
 
 // for(let i=0; i <=n; i++){
 //     for(let j=0; j <)
 // }
 
+// break and continue keyword with for loop
 
+for (let i = 0; i <= 10; i++) {
+  if (i >= 3 && i <= 6) {
+    continue;
+  }
+  //   console.log(i);
+}
 
-
+for (let i = 0; i < 100; i++) {
+  if (i === 10) {
+    console.log(`detected ${i}`);
+    break;
+  }
+  console.log(i);
+}
