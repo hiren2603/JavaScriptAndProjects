@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #222223; color: #f6f6f6;">
+    Hello
+</body>
+<script>
+    const div = document.createElement('div');
+    div.className = "main"
+    div.id= "myId"
+    div.setAttribute("title", 'generated title')
+    div.style.backgroundColor = "orange";
+    div.style.padding = "12px";
+    div.style.fontSize = "20px";
+    div.innerText = "Welcome To JS"
+    document.body.appendChild(div)
+</script>
+</html>

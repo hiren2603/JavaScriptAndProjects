@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+</head>
+<style>
+    .container{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: auto;
+        width: 80%;
+    }
+    #hidden{
+        display: none;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2 id="title">Welcome to DOM</h2>
+        <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, corporis.
+            <span id="hidden">Hello, Welcome to JS Dom Manipulation</span>
+        </p>
+        <ul id="list" class="course_list">
+            <li class="item">Javascript</li>
+            <li class="item">Python</li>
+            <li class="item">PHP</li>
+            <li class="item">Ruby</li>
+        </ul>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+    </div>
+    <script>
+        const title = document.getElementById('title')
+        const list = document.querySelector('#list')
+        title.setAttribute('class', 'page_heading pageTitle')
+        const attr = document.getElementById('title').getAttribute('class')
+        // console.log('classList ', attr)
+        // console.log('List Items', list)
+        const pageTitle = document.querySelector('.pageTitle')
+        // console.log(pageTitle)
+
+        // innerText, textCotent, innerHTML
+        const para = document.getElementsByClassName('para')
+        // console.log(para)
+        // console.log(para[0].innerText)     // only return visible elements
+        // console.log(para[0].textContent)   // return both visible and non visible elements
+        // console.log(para[0].innerHTML)     // return both text and html written in element.
+
+        // query selector
+        const span = document.querySelector('#hidden')
+        span.style.color = "orange"
+        span.style.display = 'block'
+
+        const firstItem = document.querySelector('li:first-child').textContent;
+        const thirdItem = document.querySelector('li:nth-child(2)').textContent
+        // console.log(firstItem)
+        // console.log(thirdItem)
+
+        // using tag attributes with query selector
+        const password = document.querySelector('input[type="password"]')
+        // console.log(password)
+        const username = document.querySelector('input[name="username"]')
+        // console.log(username)
+
+        // using querySelectorAll method
+        const li = document.querySelectorAll('.item')
+        // Note:  This will return nodelist not an Array (nodelist and array both are differnt)
+        // console.log(li)
+        // li[0].style.color = "blue";
+        // li.forEach(element => element.style.color = "red")  
+        
+        // className
+        const courseList = document.getElementsByClassName('course_list');
+        // This method returns classlist and has no properties like foEach or loop.
+        // courseList.forEach((item)=> console.log(item))  // this will not work
+
+        // convert courseList to array 
+
+        const courseArray = Array.from(courseList)
+        courseArray.forEach(li => li.style.color = "brown")
+        
+
+    </script>
+</body>
+</html>

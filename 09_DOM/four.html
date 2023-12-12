@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code with Tea</title>
+</head>
+<body style="background-color: #222223; color: #f7f7f7;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    <script>
+        function addItem(langName){
+            const parent = document.querySelector('.language')
+            const li = document.createElement('li');
+            li.textContent = `${langName}`
+            parent.appendChild(li)
+        }
+        // addItem('Python')
+        // addItem('Typescript')
+
+        function addItemOptimizedeWay(langName){
+            const parent = document.querySelector('.language')
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName))
+            parent.appendChild(li)
+        }
+        addItemOptimizedeWay('Python')
+        addItemOptimizedeWay('Rubi')
+
+    </script>
+</body>
+</html>
