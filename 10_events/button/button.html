@@ -19,12 +19,26 @@
 <body>
     <button type="button" id="btn">Click me</button>
 <script>
-    const btn = document.querySelector('#btn')
+const btn = document.querySelector('#btn')
+
+const onHover = ()=>{
+        btn.style.backgroundColor = "lightpink";
+        btn.style.color = "black"
+    }
+
+const onLeave = ()=>{
+    btn.style.backgroundColor = "black";
+    btn.style.color = "#fff"
+}
+btn.addEventListener('mouseover', onHover)
+btn.addEventListener('mouseout', onLeave)
+
+
+    // background changer
     const rendom = function(number){
         console.log(Math.floor(Math.random() * (number + 1)))
        return Math.floor(Math.random() * (number + 1))
     }
-
     const changeBg = function(){
         const randomColor = `rgb(${rendom(255)}, ${rendom(100)}, ${rendom(150)})`
         document.body.style.backgroundColor = randomColor;

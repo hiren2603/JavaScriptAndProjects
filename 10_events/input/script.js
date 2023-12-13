@@ -14,7 +14,7 @@ const input = document.getElementById('email')
 
     // change Event
     // Note : fire after input looses the focus
-    input.addEventListener('change', captureChange)
+    // input.addEventListener('change', captureChange)
 
     // keyup event
     // Note: fire after every kay strokes
