@@ -27,7 +27,30 @@
         }
         addItemOptimizedeWay('Python')
         addItemOptimizedeWay('Rubi')
+        addItemOptimizedeWay('PHP')
+        addItemOptimizedeWay('GoLang')
 
+
+        // Edit Item
+        function editItem(langName){
+            const secondLang = document.querySelector('li:nth-child(3)')
+            const newLi = document.createElement('li')
+            newLi.textContent = langName;
+            secondLang.replaceWith(newLi)
+        }
+        editItem("Mojo")
+
+        // second way
+        function editTwo(langName){
+            const firstElement = document.querySelector('li:first-child')
+            firstElement.outerHTML =`<li>${langName}</li>`
+        }
+        editTwo("Typescript")
+
+        // remove Element from DOM
+        const selectedItem = document.querySelector('li:nth-child(4)');
+        selectedItem.remove()
+        
     </script>
 </body>
 </html>
