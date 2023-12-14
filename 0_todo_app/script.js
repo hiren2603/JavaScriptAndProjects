@@ -14,7 +14,7 @@ descContainer.addEventListener('click', function(){
 // })
 const clearIcon = document.querySelector('.fa-xmark');
 console.log(clearIcon)
-  clearIcon.addEventListener('click', function(event){
+  clearIcon.addEventListener('click', function(){
   document.getElementById('search').value =""
 })
 
