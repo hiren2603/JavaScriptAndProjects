@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetIntervel</title>
+</head>
+<body>
+    <h1>Chai aur JS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        let intervelId;
+        const continuePrint = ()=>{
+            console.log('I called at every 2 seconds.')
+        }
+        document.getElementById('start').addEventListener('click', function(){
+            intervelId = setInterval(continuePrint, 2000)
+        })
+        document.getElementById('stop').addEventListener('click', function(){
+            clearInterval(intervelId)
+        })
+
+    </script>
+</body>
+</html>

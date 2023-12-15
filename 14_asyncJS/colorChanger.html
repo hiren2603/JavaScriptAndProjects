@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorChanger</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let hex = '0123456789abcdef';
+        function randomColor(){
+            let color = "#"
+                for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color
+        }
+        let intervelId;
+        function startChangingColor(){
+            function changeBgColor(){
+                document.body.style.backgroundColor = randomColor()
+            }
+            if(!intervelId){
+                intervelId = setInterval(changeBgColor,1000) 
+            }
+        }
+        function stopChangingColor(){
+            clearInterval(intervelId)
+            intervelId = null;
+            console.log(intervelId)
+        }
+        document.getElementById('start').addEventListener('click', startChangingColor)
+        document.getElementById('stop').addEventListener('click', stopChangingColor)
+    </script>
+</body>
+</html>
